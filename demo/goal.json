@@ -1,0 +1,25 @@
+{
+  "name": "demo-create-file",
+  "description": "演示：创建 hello.txt 并使其中包含 'hello verify loop'。先跑检测（失败），执行行动（写文件），再检测（通过）。",
+  "maxRounds": 3,
+  "actions": [
+    {
+      "type": "write_file",
+      "path": "G:/projects/goal-verify-loop/demo/hello.txt",
+      "content": "hello verify loop\n"
+    }
+  ],
+  "checks": [
+    {
+      "id": "hello-exists",
+      "type": "file_exists",
+      "path": "G:/projects/goal-verify-loop/demo/hello.txt"
+    },
+    {
+      "id": "hello-content",
+      "type": "file_contains",
+      "path": "G:/projects/goal-verify-loop/demo/hello.txt",
+      "text": "hello verify loop"
+    }
+  ]
+}

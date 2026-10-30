@@ -1,0 +1,14 @@
+{
+  "name": "goal-verify-loop",
+  "version": "1.0.0",
+  "description": "A goal-driven verification loop: understand the goal, write a checker, act, verify, analyze failure, retry until done, then stop.",
+  "type": "module",
+  "main": "src/loop.mjs",
+  "scripts": {
+    "start": "node src/loop.mjs",
+    "demo": "node src/loop.mjs --goal demo/goal.json"
+  },
+  "keywords": ["goal", "verification", "agent", "automation", "loop"],
+  "license": "MIT",
+  "engines": { "node": ">=18" }
+}
